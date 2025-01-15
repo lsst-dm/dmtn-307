@@ -9,7 +9,7 @@ Column groups in the SDM and the RSP
 Motivation
 ==========
 
-We have long planned to use the IVOA VOTable "column group" feature (VOTable XML ``<GROUP>``) in
+We have long planned to use the IVOA VOTable "column group" feature (VOTable XML ``<GROUP>``\) in
 the Rubin "Science Data Model" and in the behavior of the Rubin Science Platform (RSP).
 
 "Column groups" are non-hierarchical, it's important to recognize, so any given column can
@@ -61,7 +61,7 @@ It's possible that we might have to replace Felis with parts of the technology
 stack around VO-DML, and that would be quite a disruptive change.
 
 Additionally, it's unlikely that IPAC/IRSA would adopt VO-DML and MIVOT on any
-near-term time scale, whereas IRSA's TAP service already supports ``<GROUP>``s
+near-term time scale, whereas IRSA's TAP service already supports ``<GROUP>``\s
 and there is some very basic support for them in Firefly already.
 The ``<GROUP>`` approach therefore is more likely to benefit from the effort
 multiplier of collaboration with IRSA on Firefly development.
@@ -86,9 +86,9 @@ Defining group membership
 
 Groups are defined by ``<GROUP>`` elements in the XML data model, which generally
 appear as peers to the ``<FIELD>`` elements.
-Groups may be composed of a combination of fields and ``<PARAM>``s.
+Groups may be composed of a combination of fields and ``<PARAM>``\s.
 In this version of this note we consider only fields, though there are
-interesting applications for ``<PARAM>``s and a future revision should try to
+interesting applications for ``<PARAM>``\s and a future revision should try to
 address them as well.
 
 Fields (commonly, table columns) are included in groups by reference, not
@@ -191,4 +191,4 @@ storage permits.
 One of the desiderata for a Python interface to column-group metadata would
 be to allow the selection of columns to be read from a Parquet file to be
 specified by group in addition to by individual columns.
-For example, "read all the `cModel` flux columns from the `Object` table".
+For example, "read all the ``cModel`` flux columns from the ``Object`` table".
