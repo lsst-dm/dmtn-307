@@ -9,7 +9,7 @@ Column groups in the SDM and the RSP
 Motivation
 ==========
 
-We have long planned to use the IVOA VOTable "column group" feature (VOTable XML `<GROUP>`) in
+We have long planned to use the IVOA VOTable "column group" feature (VOTable XML ``<GROUP>``) in
 the Rubin "Science Data Model" and in the behavior of the Rubin Science Platform (RSP).
 
 "Column groups" are non-hierarchical, it's important to recognize, so any given column can
@@ -30,8 +30,8 @@ The motivation for the use of groups in the SDM and RSP has been two-fold:
   project to project.
 * Annotate larger and less-structured groups of columns as related, e.g., as all
   arising from a particular algorithm in the science pipelines -- exemplified by
-  the different categories of measurement algorithms in the `Object` table
-  (e.g., `cModel` fluxes).
+  the different categories of measurement algorithms in the ``Object`` table
+  (e.g., ``cModel`` fluxes).
 
 Exploitation of this mechanism requires work in several areas:
 
@@ -48,7 +48,7 @@ Exploitation of this mechanism requires work in several areas:
 Relationship with VO-DML and MIVOT
 ----------------------------------
 
-The IVOA `<GROUP>` mechanism is in some respects both a historical precursor and
+The IVOA ``<GROUP>`` mechanism is in some respects both a historical precursor and
 functional subset of the capabilities of the more recently defined VO-DML data model
 language and the MIVOT model for serialization of VO-DML in VOTable.
 
@@ -61,12 +61,12 @@ It's possible that we might have to replace Felis with parts of the technology
 stack around VO-DML, and that would be quite a disruptive change.
 
 Additionally, it's unlikely that IPAC/IRSA would adopt VO-DML and MIVOT on any
-near-term time scale, whereas IRSA's TAP service already supports `<GROUP>`s
+near-term time scale, whereas IRSA's TAP service already supports ``<GROUP>``s
 and there is some very basic support for them in Firefly already.
-The `<GROUP>` approach therefore is more likely to benefit from the effort
+The ``<GROUP>`` approach therefore is more likely to benefit from the effort
 multiplier of collaboration with IRSA on Firefly development.
 
-The `<GROUP>` mechanism will allow us to meet a number of key use cases before
+The ``<GROUP>`` mechanism will allow us to meet a number of key use cases before
 that time, and I believe will also help us understand whether the substantially
 larger effort involved in VO-DML and MIVOT would be justified by the benefits to
 science users.
@@ -74,7 +74,7 @@ science users.
 The VOTable <GROUP> Model
 =========================
 
-We describe briefly the nature of the `<GROUP>` model in the VOTable standard.
+We describe briefly the nature of the ``<GROUP>`` model in the VOTable standard.
 
 Note that because of recent (2024) work on standardization, we now have a way
 to include this kind of rich metadata in Parquet files, not only traditional
@@ -84,11 +84,11 @@ processing environment.
 Defining group membership
 -------------------------
 
-Groups are defined by `<GROUP>` elements in the XML data model, which generally
-appear as peers to the `<FIELD>` elements.
-Groups may be composed of a combination of fields and `<PARAM>`s.
+Groups are defined by ``<GROUP>`` elements in the XML data model, which generally
+appear as peers to the ``<FIELD>`` elements.
+Groups may be composed of a combination of fields and ``<PARAM>``s.
 In this version of this note we consider only fields, though there are
-interesting applications for `<PARAM>`s and a future revision should try to
+interesting applications for ``<PARAM>``s and a future revision should try to
 address them as well.
 
 Fields (commonly, table columns) are included in groups by reference, not
